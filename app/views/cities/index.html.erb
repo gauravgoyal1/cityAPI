@@ -1,0 +1,19 @@
+<h1> City API</h1> 
+<h3> This API helps user find the cities of a country and the country a city belongs to. </h3>
+<p> Developed by - <a href="http://gauravgoyal.in">Gaurav Goyal</a>.</p>
+<p> Contact - <a href="mailto:me@gauravgoyal.in" target="_top"> me@gauravgoyal.in</a>.</p> 
+<br>
+
+<h4>Requesting Cities of a country</h4>
+<ul>
+  <li>Returns an array of cities' name</li>
+  <li>get /?country=(country_name)</li>
+  <li>Example <%= link_to "Cities of India", '/?country=India', :target => "_blank" %></li>
+</ul>
+
+<h4>Requesting Country for the city</h4>
+<ul>
+  <li>Returns an array of countries' name</li>
+  <li>get /?city=(city_name)</li>
+  <li>Example <%= link_to "Country for Mumbai", '/?city=Mumbai', :target => "_blank" %></li>
+</ul>
