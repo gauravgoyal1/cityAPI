@@ -1,25 +1,39 @@
 <h1> City API</h1> 
 <h3> This API helps user find the cities of a country and the country a city belongs to. </h3>
-<br>
 <p>API hostname: <strong>city-api.herokuapp.com</strong></p>
 <h3>Listing Countries</h3>
 <ul>
   <li><strong>get /?countries=true</strong></li>
-  <li>Returns an array of countries' name.</li>
+  <li>Returns an object consisting.
+  <ol>
+    <li>countries_count: (integer)</li>
+    <li>countries: (array)</li>
+  </ol>
+  </li>
   <li>Example <%= link_to "Countries", '/?countries=true', :target => "_blank" %> (https://city-api.herokuapp.com/?countries=true)</li>
 </ul>
 <h3>Requesting Cities of a country</h3>
 <ul>
   <li><strong>get /?country=(country_name)</strong></li>
-  <li>Returns an array of cities' name.</li>
-  <li>Returns ['No Data'] if nothing is found.</li>
+  <li>Returns an object consisting.
+  <ol>
+    <li>country: (string)</li>
+    <li>cities_count: (integer)</li>
+    <li>cities: (array) OR ["No Data"] if nothing found</li>
+  </ol>
+  </li>
   <li>Example <%= link_to "Cities of India", '/?country=India', :target => "_blank" %> (https://city-api.herokuapp.com/?country=India)</li>
 </ul>
-<h3>Requesting Country for the city</h3>
+<h3>Requesting Country/Countries for the city</h3>
 <ul>
   <li><strong>get /?city=(city_name)</strong></li>
-  <li>Returns an array of countries' name.</li>
-  <li>Returns ['No Data'] if nothing is found.</li>
+  <li>Returns an object consisting.
+  <ol>
+    <li>city: (string)</li>
+    <li>countries_count: (integer)</li>
+    <li>countries: (array) OR ["No Data"] if nothing found</li>
+  </ol>
+  </li>
   <li>Example <%= link_to "Country for Mumbai", '/?city=Mumbai', :target => "_blank" %> (https://city-api.herokuapp.com/?city=Mumbai)</li>
 </ul>
 <br><br><br>
