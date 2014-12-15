@@ -1,19 +1,27 @@
 <h1> City API</h1> 
 <h3> This API helps user find the cities of a country and the country a city belongs to. </h3>
+<br>
+<p>API hostname: <strong>city-api.herokuapp.com</strong></p>
+<h3>Listing Countries</h3>
+<ul>
+  <li><strong>get /?countries=true</strong></li>
+  <li>Returns an array of countries' name.</li>
+  <li>Example <%= link_to "Countries", '/?countries=true', :target => "_blank" %> (https://city-api.herokuapp.com/?countries=true)</li>
+</ul>
+<h3>Requesting Cities of a country</h3>
+<ul>
+  <li><strong>get /?country=(country_name)</strong></li>
+  <li>Returns an array of cities' name.</li>
+  <li>Returns ['No Data'] if nothing is found.</li>
+  <li>Example <%= link_to "Cities of India", '/?country=India', :target => "_blank" %> (https://city-api.herokuapp.com/?country=India)</li>
+</ul>
+<h3>Requesting Country for the city</h3>
+<ul>
+  <li><strong>get /?city=(city_name)</strong></li>
+  <li>Returns an array of countries' name.</li>
+  <li>Returns ['No Data'] if nothing is found.</li>
+  <li>Example <%= link_to "Country for Mumbai", '/?city=Mumbai', :target => "_blank" %> (https://city-api.herokuapp.com/?city=Mumbai)</li>
+</ul>
+<br><br><br>
 <p> Developed by - <a href="http://gauravgoyal.in">Gaurav Goyal</a>.</p>
 <p> Contact - <a href="mailto:me@gauravgoyal.in" target="_top"> me@gauravgoyal.in</a>.</p> 
-<br>
-
-<h4>Requesting Cities of a country</h4>
-<ul>
-  <li>Returns an array of cities' name</li>
-  <li>get /?country=(country_name)</li>
-  <li>Example <%= link_to "Cities of India", '/?country=India', :target => "_blank" %></li>
-</ul>
-
-<h4>Requesting Country for the city</h4>
-<ul>
-  <li>Returns an array of countries' name</li>
-  <li>get /?city=(city_name)</li>
-  <li>Example <%= link_to "Country for Mumbai", '/?city=Mumbai', :target => "_blank" %></li>
-</ul>
