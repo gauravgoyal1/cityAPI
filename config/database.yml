@@ -4,5 +4,3 @@ development:
   database: cities_01
   pool: 5
   port: 5432
-  username: 
-  password: 
